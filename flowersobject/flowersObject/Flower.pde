@@ -8,7 +8,7 @@ float yDirc = -1; // y direction
 float xDirc = -1; // x direction'
 float speed;  
 
- Flower(int radius, float speed){ //constructor for the flower
+ Flower(int radius, float speed){
  this.speed = speed;
  r = radius;
  x = width/2;
