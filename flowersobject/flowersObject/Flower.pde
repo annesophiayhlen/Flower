@@ -18,10 +18,10 @@ float speed;
 
 void move(){  // function for moving the object
   x = x + (speed * xDirc);
-  y = y + (speed * yDirc); 
+ // y = y + (speed * yDirc); 
 }
 
-void bounce(){
+void bounce(){ //collision with wall
   
   /*if(y - r  <= 0){    // orignal collision with wall
   yDirc = 1;
@@ -37,11 +37,11 @@ void bounce(){
   }
   */
   
-  if(x - r <= 0 || x + r >= width) xDirc = xDirc*-1;
-  if(y - r <= 0 || y + r >= height) yDirc = yDirc*-1; // now speed can be ex: -1 and make is bounce around
+ // if(x - r <= 0 || x + r >= width) xDirc = xDirc*-1;
+ // if(y - r <= 0 || y + r >= height) yDirc = yDirc*-1; // now speed can be ex: -1 and make is bounce around
   
       
- // if (x > width-r || x < r || y > height || y < 0) xDirc = xDirc*-1; //bouncing on x-axis
+  if (x > width-r || x < r || y > height || y < 0) xDirc = xDirc*-1; //bouncing on x-axis
       
   
 }
