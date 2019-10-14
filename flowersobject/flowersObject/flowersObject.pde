@@ -10,8 +10,8 @@ void setup() {
 }
 
 void draw(){
-   background(#43AF76);
-  // framRate(5);
+  background(#43AF76);
+  frameRate(60);
   f1.bounce();
   f1.move();
   f1.display();
