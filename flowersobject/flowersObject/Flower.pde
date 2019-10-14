@@ -8,20 +8,21 @@ float yDirc = -1; // y direction
 float xDirc = -1; // x direction'
 float speed;  
 
- Flower(int radius, float speed){
+ Flower(int radius, float speed, float xLocation, float yLocation){
  this.speed = speed;
  r = radius;
- x = width/2;
- y = height/2;
+ x = xLocation;
+ y = yLocation;
 
 }
 
 void move(){  // function for moving the object
   x = x + (speed * xDirc);
-  y = y + (speed * yDirc);
+  y = y + (speed * yDirc); 
 }
 
 void bounce(){
+  
   /*if(y - r  <= 0){    // orignal collision with wall
   yDirc = 1;
   }
@@ -35,8 +36,13 @@ void bounce(){
   xDirc = -1;
   }
   */
-  if(y - r <= 0 || y + r >= height) yDirc = yDirc*-1; // now speed can be -
+  
   if(x - r <= 0 || x + r >= width) xDirc = xDirc*-1;
+  if(y - r <= 0 || y + r >= height) yDirc = yDirc*-1; // now speed can be ex: -1 and make is bounce around
+  
+      
+ // if (x > width-r || x < r || y > height || y < 0) xDirc = xDirc*-1; //bouncing on x-axis
+      
   
 }
 void display(){
