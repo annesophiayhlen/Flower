@@ -5,7 +5,7 @@ Flower f3;
 void setup() {
   size(1000,800);
   f1 = new Flower(20,4,width/2,height/2);
-  f2 = new Flower(35,-4,width/2,600);
+  f2 = new Flower(35,-4,width/2,600,color(random(255),random(255),random(255)));
   f3 = new Flower(65,5,width/2,200);
 }
 

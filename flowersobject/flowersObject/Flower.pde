@@ -6,7 +6,8 @@ float x;
 float y;
 float yDirc = -1; // y direction
 float xDirc = -1; // x direction'
-float speed;  
+float speed;
+color fillColor = #FFA005;
 
  Flower(int radius, float speed, float xLocation, float yLocation){
  this.speed = speed;
@@ -15,6 +16,13 @@ float speed;
  y = yLocation;
 
 }
+ Flower(int radius, float speed, float xLocation, float yLocation, int rColor){
+ this.speed = speed;
+ r = radius;
+ x = xLocation;
+ y = yLocation;
+ fillColor = rColor;
+ }
 
 void move(){  // function for moving the object
   x = x + (speed * xDirc);
@@ -46,7 +54,7 @@ void bounce(){ //collision with wall
   
 }
 void display(){
-  fill(#FFA005);
+  fill(fillColor);
   for (float i=0;i<PI*2;i+=2*PI/5) {
     ballX=r*cos(i);
     ballY=r*sin(i);
